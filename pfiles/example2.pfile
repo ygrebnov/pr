@@ -1,0 +1,4 @@
+RUN touch step1
+RUN touch step2; sleep 2; echo "step2 async, after sleeping for 2s" > step2 ASYNC
+RUN echo "Parallel running action is sleeping. It's current output:\n$(cat sleep2)" > step3 ASYNC
+RUN echo "Two previous parallel actions are completed. Final output of the job which was sleeping:\n$(cat sleep2)" > step4

@@ -1,0 +1,2 @@
+GIT https://github.com/google/re2.git BRANCH main DEST /tmp ASYNC
+RUN echo hello
